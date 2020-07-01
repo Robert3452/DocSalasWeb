@@ -105,6 +105,12 @@ body a:hover {
     color: #fff;
 }
 
+.poser {
+    position: relative;
+    width: 84px;
+    display: block;
+}
+
 .masterhead__contact {
     width: 100%;
     height: 200px;
@@ -141,6 +147,119 @@ body a:hover {
 .swipebox {
     background-color: #08802E!important;
     color: #08802E!important;
+}
+
+.presentation {
+    width: 90%!important;
+    margin: auto;
+    padding: 70px 0px;
+}
+
+.presentation__container {
+    border: 1px solid #75C3B8;
+    display: inline-block;
+}
+
+.presentation__left, .presentation__right {
+    padding: 50px 40px;
+}
+
+.presentation--title {
+    text-align: center;
+    font-size: 60px;
+    font-family: "Montserrat-ExtraBold";
+    color: #08802E;
+    margin-bottom: 20px;
+}
+
+.presentation--subtitle {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-family: "Montserrat-Italic";
+    color: #08802E;
+}
+
+.presentation__right img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.presentation--paragraph {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #131716;
+}
+
+.content {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.presentation--btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    background-color: #55AA27!important;
+}
+
+.presentation__hitos {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center!important;
+    align-items: center!important;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.hitos {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly!important;
+    align-items: center!important;
+    flex-wrap: wrap;
+}
+
+.hitos__item {
+    text-align: center;
+    width: 220px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.hitos__item h3 {
+    font-size: 35px;
+    color: #55AA27;
+    font-family: "Montserrat-Bold";
+}
+
+.hitos__item span {
+    font-size: 20px;
+}
+
+.team-info {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.paragraph-info {
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    color: #979797;
+}
+
+.paragraph-info strong {
+    font-family: "Montserrat-Bold";
 }
 
 /*-- banner --*/
@@ -414,8 +533,13 @@ div#bs-example-navbar-collapse-1 {
 h3.w3layouts-title {
     font-size: 4em;
     text-align: center;
-    color: #000;
+    color: #23952E;
     margin-bottom: 1em;
+}
+
+.team .w3layouts-title, .testimonial .w3layouts-title ,.contact .w3layouts-title{
+    text-transform: uppercase;
+    font-family: "Montserrat-ExtraBold";
 }
 
 p {
@@ -555,7 +679,7 @@ p {
     color: #999;
 }
 
-.about-right span.glyphicon {
+.about-right span.fas, .about-right span.far {
     font-size: .8em;
     margin-right: 1em;
     -webkit-transition: .5s all;
@@ -563,7 +687,7 @@ p {
     -moz-transition: .5s all;
 }
 
-.about-right ul li:hover span.glyphicon {
+.about-right ul li:hover span.fas .about-right ul li:hover span.far {
     padding-left: 0.8em;
     margin-right: 0.2em;
 }
@@ -573,7 +697,8 @@ p {
 /*-- services --*/
 
 .services {
-    background: url(../images/1.jpg)no-repeat center fixed;
+    background: linear-gradient(to top, rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)), url(../images/bg/Fondo_de_servicios.png)no-repeat center fixed;
+    background-size: cover;
     padding: 4em 0 5em;
 }
 
@@ -584,6 +709,10 @@ p {
 
 .services-agile-grid {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .w3-agile-counter {
@@ -603,7 +732,7 @@ p {
 
 /*-- Effect 1 --*/
 
-.services-agile-grid span.glyphicon {
+.services-agile-grid span.fas, .services-agile-grid span.far {
     font-size: 2em;
     color: #A6C751;
     display: inline-block;
@@ -617,7 +746,7 @@ p {
     padding: 0.8em;
 }
 
-.services-agile-grid span.glyphicon:after {
+.services-agile-grid span.fas:after, .services-agile-grid span.far:after {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -662,13 +791,13 @@ p {
     -moz-opacity: 0;
 }
 
-.services-agile-grid:hover span.glyphicon {
+.services-agile-grid:hover span.fas, .services-agile-grid:hover span.far {
     background: #75C3B8;
     color: #fff !important;
     border-color: #75C3B8;
 }
 
-.services-agile-grid:hover span.glyphicon:after {
+.services-agile-grid:hover span.fas:after, .services-agile-grid:hover span.far:after {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
@@ -686,13 +815,12 @@ p {
 
 .team-grids {
     float: left;
-    width: 22%;
     padding: 0;
-    margin-left: 3em;
     overflow: hidden;
     position: relative;
     display: block;
     text-align: center;
+    width: 100%!important;
 }
 
 .team-grids:nth-child(1) {
@@ -709,6 +837,17 @@ p {
     margin-top: 1em;
 }
 
+/* .item_container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap!important;
+    height: 500px;
+} */
+
+.paragraph {
+    width: 100%;
+}
+
 .team-grids .agileits-captn {
     display: inline-block;
     width: 100%;
@@ -717,7 +856,7 @@ p {
     top: 0%;
     right: 0;
     opacity: 0;
-    background-color: rgba(249, 92, 171, 0.78);
+    background-color: rgba(0, 0, 0, 0.3);
     text-align: center;
     -moz-transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
@@ -727,8 +866,18 @@ p {
 
 .team-grids:hover .agileits-captn {
     width: 100%;
-    top: 48%;
+    top: 70%;
+    bottom: 0%;
     opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-grids:hover .agileits-captn span {
+    font-size: 25px;
+    font-family: "Montserrat-ExtraBold";
+    color: #A6C751;
 }
 
 .team-grids p {
@@ -758,7 +907,7 @@ p {
 
 .resp-tabs-list {
     list-style: none;
-    border: 1px solid #ccc;
+    border: 1px solid #55AA27;
     padding: 1.5em 3em;
     display: inline-block;
 }
@@ -781,12 +930,12 @@ p {
 
 .resp-tab-active {
     text-shadow: none;
-    color: #4acbf6;
+    color: #75C3B8;
     border-bottom: 2px solid;
 }
 
 .resp-tab-item:hover {
-    color: #4acbf6;
+    color: #75C3B8;
 }
 
 .resp-tabs-container {
@@ -885,19 +1034,20 @@ h2.resp-accordion {
 /*-- testimonial --*/
 
 .testimonial {
-    background: url(../images/1.jpg)no-repeat center;
+    background: linear-gradient(to right, rgba(8, 128, 46, .9), rgba(85, 170, 39, .7)), url(../images/bg/fondo_de_testimonios.png)no-repeat center;
+    background-size: cover;
     margin-top: 5em;
 }
 
 .testimonial-grids {
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
 }
 
 .testimonial-left {
     width: 14%;
     float: left;
-    border: 2px solid #F44336;
+    border: 2px solid #A6C751;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -o-border-radius: 50%;
@@ -931,6 +1081,7 @@ h2.resp-accordion {
 .testimonial-right p {
     color: #fff;
     margin: 1.5em 0 0 0;
+    font-size: 20px;
 }
 
 .testimonial-right p span {
@@ -972,7 +1123,7 @@ h2.resp-accordion {
 
 .contact-form h5 {
     font-size: 2em;
-    color: #00b6f3;
+    color: #55AA27;
 }
 
 .contact-right p {
@@ -1000,7 +1151,7 @@ h2.resp-accordion {
 }
 
 .address p a:hover {
-    color: #00b6f3;
+    color: #75C3B8;
 }
 
 .contact-form input[type="text"] {
@@ -1008,9 +1159,10 @@ h2.resp-accordion {
     color: #999;
     background: none;
     outline: none;
+
     font-size: 1em;
     padding: .7em .8em;
-    border: solid 1px #ccc;
+    border: solid 1px #A6C751;
     -webkit-appearance: none;
     display: inline-block;
 }
@@ -1027,7 +1179,7 @@ input.email {
     font-size: 1em;
     outline: none;
     padding: .7em .8em;
-    border: solid 1px #ccc;
+    border: solid 1px #A6C751;
     min-height: 8em;
     -webkit-appearance: none;
     margin-top: 1em;
@@ -1037,11 +1189,14 @@ input.email {
     border: none;
     outline: none;
     color: #fff;
-    padding: .8em 3em;
+    padding: .4em 1.5em;
     font-size: 1em;
     margin: 1em 1em 0 0;
     -webkit-appearance: none;
-    background: #00b6f3;
+    border-radius: 10px;
+    background: #55AA27;
+    font-family: "Montserrat-Bold";
+    font-size: 20px;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
@@ -1293,7 +1448,7 @@ input.email {
         margin: 1em 3em 0;
     }
     .team-grids:hover .agileits-captn {
-        top: 54.5%;
+        top: 70%;
     }
     .portfolio-grids {
         padding: 0 .5em;
@@ -1417,7 +1572,7 @@ input.email {
         padding: 0.5em;
     }
     .team-grids:hover .agileits-captn {
-        top: 49.5%;
+        top: 70%;
     }
     .portfolio-grids {
         padding: .5em;
@@ -1473,11 +1628,11 @@ input.email {
     .navbar-nav>li>a {
         font-size: 1.1em;
     }
-    .services-agile-grid span.glyphicon {
+    .services-agile-grid span.fas, .services-agile-grid span.far {
         font-size: 1.5em;
     }
     .team-grids:hover .agileits-captn {
-        top: 48%;
+        top: 70%;
     }
     .team-grids p {
         margin: 0.3em 0.5em 0;
@@ -1516,7 +1671,7 @@ input.email {
         margin: 1em 0 0 0;
     }
     .team-grids:hover .agileits-captn {
-        top: 49%;
+        top: 70%;
     }
 }
 
@@ -1532,7 +1687,7 @@ input.email {
         margin: 1.5em 0.9em 0;
     }
     .team-grids:hover .agileits-captn {
-        top: 50%;
+        top: 70%;
     }
     .resp-tabs-list {
         padding: 1.5em 2em;
@@ -1615,7 +1770,7 @@ input.email {
         margin: 0 auto;
     }
     .team-grids:hover .agileits-captn {
-        top: 55%;
+        top: 70%;
     }
     .resp-tabs-list {
         padding: 1.5em 1em;
@@ -1729,7 +1884,7 @@ input.email {
         padding: 6px 10px;
     }
     .team-grids:hover .agileits-captn {
-        top: 57%;
+        top: 70%;
     }
 }
 
@@ -1738,7 +1893,7 @@ input.email {
         font-size: 2.2em;
     }
     .team-grids:hover .agileits-captn {
-        top: 53%;
+        top: 70%;
     }
     .portfolio-grids {
         width: 100%;
