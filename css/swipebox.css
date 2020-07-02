@@ -49,7 +49,7 @@ html.swipebox-html.swipebox-touch {
 #swipebox-slider .slide:before {
   content: "";
   display: inline-block;
-  height: 43%;
+  height: 25%;
   width: 1px;
   margin-right: -1px;
 }
@@ -119,9 +119,43 @@ html.swipebox-html.swipebox-touch {
 }
 #swipebox-title {
     display: block;
-    width: 45%;
-    text-align: center;
+    width: 80%;
+    text-align: left;
     margin: 0 auto !important;
+}
+#swipebox-title h3 {
+  text-align: center;
+  color:#55AA27 ;
+  font-family: "Montserrat-Bold";
+}
+ul{
+  list-style: none ;
+  /* background-color: #55AA27; */
+}
+#swipebox-title  ul li::before{
+  content: "\2022";
+  color: #55AA27;
+  margin-right: 20px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  /* width: 2em; */
+
+}
+#swipebox-title p{
+  color: #fff;
+  margin-top: 20px;
+}
+#swipebox-title .italic{
+  font-family: "Montserrat-Italic";
+}
+#swipebox-title .bold__italic{
+  font-family: "Montserrat-Italic";
+
+}
+#swipebox-title .warning{
+  font-size: 20px;
+  color: #55AA27;
 }
 
 #swipebox-prev,
@@ -294,10 +328,11 @@ html.swipebox-html.swipebox-touch {
   font-size: 15px;
   line-height: 30px;
   font-family: Helvetica, Arial, sans-serif;
+  bottom: 50%;
 }
 @media(max-width:1366px){
 #swipebox-top-bar {
-    bottom: 20%;
+    bottom: 50%;
 }
 }
 @media(max-width:1080px){
@@ -307,7 +342,7 @@ html.swipebox-html.swipebox-touch {
     margin: 1em auto 0 !important;
 } 
 #swipebox-top-bar {
-    bottom: 9%;
+    bottom: 50%;
 }
 }
 @media(max-width:768px){ 
