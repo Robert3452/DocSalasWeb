@@ -79,30 +79,38 @@ body a:hover {
 }
 
 .masterhead__container {
-    width: 720px;
+    width: 850px;
     margin: auto;
     margin-top: 40px;
 }
 
 .masterhead__title {
     text-align: center;
-    font-size: 85px;
+    font-size: 75px;
     font-family: "Montserrat-ExtraBold";
     text-transform: uppercase;
     color: #fff;
 }
 
 .masterhead__title span {
-    font-size: 119px;
+    font-size: 104px;
     margin: auto;
     text-align: center;
     color: rgb(166, 199, 81);
 }
 
 .masterhead__subtitle {
-    font-size: 19px;
+    font-size: 30px;
     text-align: center;
     color: #fff;
+    margin-top: 25px;
+}
+
+.masterhead__subtitle-h4 {
+    font-size: 22px;
+    color: #ececec;
+    margin-top: 50px;
+    text-align: center;
 }
 
 .poser {
@@ -265,10 +273,10 @@ body a:hover {
 /*-- banner --*/
 
 .banner {
-    background: linear-gradient(to bottom, rgba(60, 161, 44, 0.5), rgba(85, 170, 39, 0.5)), url(../images/1.jpg)no-repeat 0px 0px;
-    -webkit-background-size: cover;
-    background-size: cover;
-    -moz-background-size: cover;
+    background: linear-gradient(to bottom, rgba(8, 128, 46, 0.7), rgba(8, 128, 46, 0.7)), url(../images/bg/quirofano_cirugia_cuello_cabeza.png)no-repeat center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    -moz-background-size: contain;
     min-height: 900px;
 }
 
@@ -385,7 +393,7 @@ body a:hover {
 /*-- top-w3lnav --*/
 
 .top-w3lnav {
-    margin: 10em 0 0 0;
+    margin: 1em 0 0 0;
 }
 
 .navbar-nav {
@@ -528,6 +536,7 @@ div#bs-example-navbar-collapse-1 {
 
 .welcome, .about, .team, .testimonials, .gallery, .contact {
     padding: 5em 0;
+    padding-bottom: 0;
 }
 
 h3.w3layouts-title {
@@ -537,7 +546,7 @@ h3.w3layouts-title {
     margin-bottom: 1em;
 }
 
-.team .w3layouts-title, .testimonial .w3layouts-title ,.contact .w3layouts-title{
+.team .w3layouts-title, .testimonial .w3layouts-title, .contact .w3layouts-title {
     text-transform: uppercase;
     font-family: "Montserrat-ExtraBold";
 }
@@ -620,7 +629,7 @@ p {
     padding: 3.1em 0;
 }
 
-.welcome-w3lsicon i.glyphicon {
+.welcome-w3lsicon i.fas, .welcome-w3lsicon i.far, .welcome-w3lsicon i.fab, .welcome-w3lsicon i.fa {
     font-size: 2.5em;
     color: #333;
     padding: .7em;
@@ -1119,6 +1128,8 @@ h2.resp-accordion {
     width: 100%;
     min-height: 350px;
     border: none;
+    height: 100%;
+    margin-bottom: 0;
 }
 
 .contact-form h5 {
@@ -1140,9 +1151,9 @@ h2.resp-accordion {
     margin-top: 1em;
 }
 
-.address p i.glyphicon {
+.address p i.fas, .address p i.fab, .address p i.far, .address p i.fa {
     font-size: 1em;
-    color: #F44336;
+    color: #55AA27;
     margin-right: 0.5em;
 }
 
@@ -1159,7 +1170,6 @@ h2.resp-accordion {
     color: #999;
     background: none;
     outline: none;
-
     font-size: 1em;
     padding: .7em .8em;
     border: solid 1px #A6C751;
@@ -1203,7 +1213,7 @@ input.email {
 }
 
 .contact-form input[type="submit"]:hover {
-    background: #F44336;
+    background: #75C3B8;
 }
 
 /*-- //contact --*
@@ -1260,6 +1270,7 @@ input.email {
 
 .footer-bottom {
     background: url(../images/1.jpg)no-repeat center 0px;
+    background-size: cover;
     text-align: center;
     padding: 2em 0;
 }
@@ -1782,7 +1793,7 @@ input.email {
         font-size: 0.9em;
         padding: 18px 10px;
     }
-    .welcome-w3lsicon i.glyphicon {
+    .welcome-w3lsicon i.fas, .welcome-w3lsicon i.far, .welcome-w3lsicon i.fab, .welcome-w3lsicon i.far, {
         font-size: 2em;
     }
     .welcome-w3lsicon span {
