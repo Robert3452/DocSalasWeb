@@ -146,10 +146,10 @@ ul{
   color: #fff;
   margin-top: 20px;
 }
-#swipebox-title .italic{
+.modal__title .italic{
   font-family: "Montserrat-Italic";
 }
-#swipebox-title .bold__italic{
+.modal__title .bold__italic{
   font-family: "Montserrat-Italic";
 
 }
@@ -328,7 +328,7 @@ ul{
   font-size: 15px;
   line-height: 30px;
   font-family: Helvetica, Arial, sans-serif;
-  bottom: 50%;
+  bottom: 45%;
 }
 @media(max-width:1366px){
 #swipebox-top-bar {

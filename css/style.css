@@ -23,6 +23,64 @@
     src: url("../fonts/Montserrat-Italic.ttf");
 }
 
+.swipebox1 {
+    position: relative;
+}
+
+.invisible_button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+.container-img {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.modal__title {
+    text-align: center;
+    color: #55AA27;
+    font-family: "Montserrat-Bold";
+}
+
+.modal__title .italic {
+    font-family: "Montserrat-Italic";
+}
+
+.modal__title .bold__italic {
+    font-family: "Montserrat-Italic";
+}
+
+ul {
+    list-style: none;
+    /* background-color: #55AA27; */
+}
+
+.container-description ul li::before {
+    content: "\2022";
+    color: #55AA27;
+    margin-right: 20px;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    /* width: 2em; */
+}
+
+.invisible_button:hover {
+    border: none;
+}
+
+.mt-3 {
+    margin-top: 60px;
+}
+
 strong {
     font-family: "Montserrat-SemiBold";
 }
@@ -56,6 +114,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-right {
     margin-left: auto;
     margin-right: 20px!important;
+    font-size: .8em;
 }
 
 p {
@@ -75,11 +134,12 @@ body a:hover {
 /* CUSTOMIZED */
 
 .agileits-logo.navbar-left {
-    width: 30%;
+    width: 350px;
 }
 
 .agileits-logo.navbar-left img {
     width: 100%;
+    height: 80px;
 }
 
 .masterhead__container {
@@ -106,6 +166,7 @@ body a:hover {
 .masterhead__subtitle {
     font-size: 2.5vw;
     text-align: center;
+    text-transform: capitalize;
     color: #fff;
     margin-top: 25px;
 }
@@ -131,6 +192,7 @@ body a:hover {
     justify-content: space-evenly;
     flex-wrap: wrap;
     font-weight: bold;
+    margin-bottom: 50px;
 }
 
 .masterhead__contact--item {
@@ -150,7 +212,7 @@ body a:hover {
 }
 
 .masterhead__contact--item h3 {
-    font-size: 1.4vw;
+    font-size: 1.5em;
     text-transform: uppercase;
 }
 
@@ -158,7 +220,7 @@ body a:hover {
     background-color: #08802E!important;
 }
 
-.swipebox {
+.swipebox, .swipebox1 {
     background-color: #08802E!important;
     color: #08802E!important;
 }
@@ -195,14 +257,21 @@ body a:hover {
 }
 
 .presentation__right img {
-    width: 100%;
-    object-fit: cover;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+    height: 90vh;
+    align-self: center;
+    justify-self: center;
+    display: flex;
 }
 
 .presentation--paragraph {
     font-size: 16px;
     margin-bottom: 15px;
     color: #131716;
+    text-align: justify;
 }
 
 .content {
@@ -925,6 +994,11 @@ p {
     border: 1px solid #55AA27;
     padding: 1.5em 3em;
     display: inline-block;
+    /* display: flex; */
+    /* justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; */
 }
 
 .resp-tab-item {
@@ -939,7 +1013,8 @@ p {
     -ms-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
-    margin: 0 1.8em 0;
+    margin: 20px 1.8em 0;
+    margin: 15px!important;
     border-bottom: 2px solid transparent;
 }
 
@@ -1275,7 +1350,7 @@ input.email {
 /*-- footer-bottom --*/
 
 .footer-bottom {
-    background: url(../images/1.jpg)no-repeat center 0px;
+    background: linear-gradient(to bottom, rgba(35, 148, 46, .5), rgba(60, 161, 44, 0.7));
     background-size: cover;
     text-align: center;
     padding: 2em 0;
@@ -1330,6 +1405,9 @@ input.email {
 @media(max-width:1280px) {
     .banner {
         min-height: 800px;
+    }
+    .masterhead__contact--item h3 {
+        font-size: 1em;
     }
     .top-w3lnav {
         margin: 6em 0 0 0;
@@ -1408,6 +1486,9 @@ input.email {
     .services {
         padding: 3em 0 4em;
     }
+    /* .agileits-logo.navbar-left {
+        width:35%;
+    } */
 }
 
 @media(max-width:991px) {
@@ -1654,6 +1735,9 @@ input.email {
     .team-grids p {
         margin: 0.3em 0.5em 0;
     }
+    /* .agileits-logo.navbar-left {
+        width:50%;
+    } */
 }
 
 @media(max-width:600px) {
@@ -1737,11 +1821,18 @@ input.email {
 }
 
 @media(max-width:480px) {
+    .presentation__right img {
+        object-fit: contain;
+    }
     .social-icons ul li a.fa, .social-icons ul li a.fab {
         width: 35px;
         height: 35px;
         margin: 5px 5px;
         line-height: 2.4em;
+    }
+    .agileits-logo.navbar-left img {
+        /* height:70px; */
+        /* object-fit:contain; */
     }
     .banner {
         min-height: 480px;
@@ -1945,6 +2036,13 @@ input.email {
     .footer-grids:nth-child(2) {
         margin: 1.5em 0;
     }
+    .social-icons ul li a.fa, .social-icons ul li a.fab {
+        line-height: 2.4em;
+        width: 30px;
+        height: 30px;
+        margin: 5px 0px;
+        font-size: 1.2em;
+    }
 }
 
 @media(max-width:320px) {
@@ -1955,7 +2053,7 @@ input.email {
         line-height: 2.4em;
         width: 30px;
         height: 30px;
-        margin: 5px 2px;
+        margin: 5px 0px;
         font-size: 0.9em;
     }
     .navbar-right.social-icons {
@@ -2027,13 +2125,6 @@ input.email {
     }
 }
 
-/* @media(max-width:425px) {
-    .navbar-right ul{
-        margin-top: 0px;
-    }
-   
-} */
-
 @media(max-width:700px) {
     .masterhead__title {
         font-size: 30px;
@@ -2050,16 +2141,16 @@ input.email {
     .masterhead__contact--item h3 {
         font-size: 10px;
     }
-    .top-w3lnav{
+    .top-w3lnav {
         margin-top: 3em;
     }
-    .presentation--title{
+    .presentation--title {
         font-size: 30px;
     }
-    .presentation--paragraph{
+    .presentation--paragraph {
         font-size: 12px;
     }
-    .presentation__left, .presentation__right{
+    .presentation__left, .presentation__right {
         padding: 30px 20px;
     }
 }
